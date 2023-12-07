@@ -1,0 +1,35 @@
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .inputContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px; /* Optional: Adjust the spacing between input/span and button */
+  }
+
+  .form button {
+    font: inherit;
+    cursor: pointer;
+    background-color: #8a2b06;
+    border: 1px solid #8a2b06;
+    color: white;
+    padding: 10px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  .form button:hover,
+  .form button:active {
+    background-color: #641e03;
+    border-color: #641e03;
+  }
+
+  .price {
+    margin-bottom: 7px;
+    font-weight: bold;
+    color: #ad5502;
+    font-size: 1.25rem;
+  }
