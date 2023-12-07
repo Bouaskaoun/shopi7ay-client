@@ -44,7 +44,7 @@ const Cart = (props) => {
     if (validateCode(enteredCode)) {
       try {
         await axios.post(
-          "http://localhost:3001/orders",
+          "https://shpi7ay-api.onrender.com/orders",
           {
             code: enteredCode,
             items: cartCtx.items,
