@@ -5,6 +5,7 @@ import Card from "../UI/Card";
 import MealItem from "./MealItem/MealItem";
 
 const AvailableMeals = () => {
+  const [isLoding, setIsLoding] = useState(true);
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -14,6 +15,7 @@ const AvailableMeals = () => {
           "https://shpi7ay-api.onrender.com/products"
         );
         setProducts(response.data);
+        setIsLoding(false);
       } catch (error) {
         console.error("Error fetching products:", error);
       }
@@ -35,7 +37,13 @@ const AvailableMeals = () => {
 
   return (
     <section className={classes.meals}>
-      <Card>{mealsList}</Card>
+      {isLoding && (
+        <div className={classes["loader-container"]}>
+          <div className={classes.loader}></div>
+          <div className={classes["loader-text"]}>Loading...</div>
+        </div>
+      )}
+      {!isLoding && <Card>{mealsList}</Card>}
     </section>
   );
 };

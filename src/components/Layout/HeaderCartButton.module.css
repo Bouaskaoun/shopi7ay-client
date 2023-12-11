@@ -65,4 +65,7 @@
       max-width: 250px;
       padding: 0.3rem 1rem;
     }
+    .hide-on-small {
+      display: none;
+    }
   }

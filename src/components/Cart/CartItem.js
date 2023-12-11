@@ -11,14 +11,14 @@ const CartItem = (props) => {
           <button onClick={props.onRemove}>Remove</button>
         </div>
       </div>
-      <div className={classes["cart-product-price"]}>${props.price}</div>
+      <div className={classes["cart-product-price"]}>{props.price} MAD</div>
       <div className={classes["cart-product-quantity"]}>
         <button onClick={props.onDecrease}>-</button>
         <div className={classes["count"]}>{props.amount}</div>
         <button onClick={props.onAdd}>+</button>
       </div>
       <div className={classes["cart-product-total-price"]}>
-        ${props.price * props.amount}
+        {props.price * props.amount} MAD
       </div>
     </div>
   );

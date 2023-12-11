@@ -11,7 +11,7 @@ const Cart = (props) => {
   const codeInputRef = useRef();
   const cartCtx = useContext(CartContext);
 
-  const totalAmount = `$${cartCtx.totalAmount.toFixed(2)}`;
+  const totalAmount = `${cartCtx.totalAmount.toFixed(2)} MAD`;
 
   const cartItemRemoveHandler = (id) => {
     cartCtx.removeItem(id);

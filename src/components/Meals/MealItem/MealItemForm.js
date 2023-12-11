@@ -41,7 +41,7 @@ const MealItemForm = (props) => {
             defaultValue: "1",
           }}
         />
-        <span className={classes.price}>${props.price}</span>
+        <span className={classes.price}>{props.price} MAD</span>
       </div>
       <button>Add</button>
       {!amountIsValid && <p>Please enter a valid amount (1-10).</p>}
